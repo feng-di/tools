@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  oracle:
+    image: store/oracle/database-enterprise:12.2.0.1-slim
+    restart: 'no'
+    environment:
+      DB_SID: ORCLCDB
+      DB_PDB: ORCLPDB1
+      DB_MEMORY: 1GB
+      DB_DOMAIN: localdomain
+#      USERNAME: sys
+#      PASSWORD: Oradoc_db1
+#      SERVICE_NAME: ORCLPDB1.localdomain
+
+    volumes:
+      - ./data:/ORCL
+    ports:
+      - 1521:1521
