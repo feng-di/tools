@@ -2,3 +2,6 @@
 
 **/data/*
 !**/data/.gitignore
+
+**/app/*
+!**/app/.gitignore

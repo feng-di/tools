@@ -1,0 +1,14 @@
+version: '3'
+
+services:    
+    php:
+        build: 
+            context: .
+            dockerfile: docker/Dockerfile
+        image: symfony
+    
+        command: php -S 0.0.0.0:80 app/public/index.php
+        ports: 
+            - 8080:80
+        volumes: 
+            - ./app:/app
